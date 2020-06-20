@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>JupyterDash | gbNotes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="JupyterDash" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html" />
+<meta property="og:url" content="https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html" />
+<meta property="og:site_name" content="gbNotes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-20T00:00:00-05:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"JupyterDash","dateModified":"2020-06-20T00:00:00-05:00","datePublished":"2020-06-20T00:00:00-05:00","url":"https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/gbnotes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bombagian.github.io/gbnotes/feed.xml" title="gbNotes" /><link rel="shortcut icon" type="image/x-icon" href="/gbnotes/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>JupyterDash | gbNotes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="JupyterDash" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html" />
+<meta property="og:url" content="https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html" />
+<meta property="og:site_name" content="gbNotes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-20T00:00:00-05:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"JupyterDash","dateModified":"2020-06-20T00:00:00-05:00","datePublished":"2020-06-20T00:00:00-05:00","url":"https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://bombagian.github.io/gbnotes/2020/06/20/getting_started.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://bombagian.github.io/gbnotes/feed.xml" title="gbNotes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/gbnotes/">gbNotes</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/gbnotes/about/">About Me</a><a class="page-link" href="/gbnotes/search/">Search</a><a class="page-link" href="/gbnotes/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">JupyterDash</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-20T00:00:00-05:00" itemprop="datePublished">
+        Jun 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/bombagian/gbnotes/tree/master/_notebooks/2020-06-20-getting_started.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/gbnotes/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/bombagian/gbnotes/master?filepath=_notebooks%2F2020-06-20-getting_started.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/gbnotes/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/bombagian/gbnotes/blob/master/_notebooks/2020-06-20-getting_started.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/gbnotes/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-06-20-getting_started.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">jupyter_dash</span> <span class="kn">import</span> <span class="n">JupyterDash</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">dash</span>
+<span class="kn">import</span> <span class="nn">dash_core_components</span> <span class="k">as</span> <span class="nn">dcc</span>
+<span class="kn">import</span> <span class="nn">dash_html_components</span> <span class="k">as</span> <span class="nn">html</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When running in JupyterHub or Binder, call the <code>infer_jupyter_config</code> function to detect the proxy configuration.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">JupyterDash</span><span class="o">.</span><span class="n">infer_jupyter_proxy_config</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Load and preprocess data</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://plotly.github.io/datasets/country_indicators.csv&#39;</span><span class="p">)</span>
+<span class="n">available_indicators</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Construct the app and callbacks</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">external_stylesheets</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://codepen.io/chriddyp/pen/bWLwgP.css&#39;</span><span class="p">]</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">JupyterDash</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">external_stylesheets</span><span class="o">=</span><span class="n">external_stylesheets</span><span class="p">)</span>
+
+<span class="c1"># Create server variable with Flask server object for use with gunicorn</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">server</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+
+        <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+            <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+                <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;crossfilter-xaxis-column&#39;</span><span class="p">,</span>
+                <span class="n">options</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">available_indicators</span><span class="p">],</span>
+                <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Fertility rate, total (births per woman)&#39;</span>
+            <span class="p">),</span>
+            <span class="n">dcc</span><span class="o">.</span><span class="n">RadioItems</span><span class="p">(</span>
+                <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;crossfilter-xaxis-type&#39;</span><span class="p">,</span>
+                <span class="n">options</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span> <span class="s1">&#39;Log&#39;</span><span class="p">]],</span>
+                <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span>
+                <span class="n">labelStyle</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;49%&#39;</span><span class="p">,</span> <span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">}),</span>
+
+        <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+            <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+                <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;crossfilter-yaxis-column&#39;</span><span class="p">,</span>
+                <span class="n">options</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">available_indicators</span><span class="p">],</span>
+                <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Life expectancy at birth, total (years)&#39;</span>
+            <span class="p">),</span>
+            <span class="n">dcc</span><span class="o">.</span><span class="n">RadioItems</span><span class="p">(</span>
+                <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;crossfilter-yaxis-type&#39;</span><span class="p">,</span>
+                <span class="n">options</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span> <span class="s1">&#39;Log&#39;</span><span class="p">]],</span>
+                <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span>
+                <span class="n">labelStyle</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">],</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;49%&#39;</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">})</span>
+    <span class="p">],</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;borderBottom&#39;</span><span class="p">:</span> <span class="s1">&#39;thin lightgrey solid&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;backgroundColor&#39;</span><span class="p">:</span> <span class="s1">&#39;rgb(250, 250, 250)&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;padding&#39;</span><span class="p">:</span> <span class="s1">&#39;10px 5px&#39;</span>
+    <span class="p">}),</span>
+
+    <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;crossfilter-indicator-scatter&#39;</span><span class="p">,</span>
+            <span class="n">hoverData</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;customdata&#39;</span><span class="p">:</span> <span class="s1">&#39;Japan&#39;</span><span class="p">}]}</span>
+        <span class="p">)</span>
+    <span class="p">],</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;49%&#39;</span><span class="p">,</span> <span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span> <span class="s1">&#39;padding&#39;</span><span class="p">:</span> <span class="s1">&#39;0 20&#39;</span><span class="p">}),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;x-time-series&#39;</span><span class="p">),</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;y-time-series&#39;</span><span class="p">),</span>
+    <span class="p">],</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;49%&#39;</span><span class="p">}),</span>
+
+    <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span><span class="n">dcc</span><span class="o">.</span><span class="n">Slider</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;crossfilter-year--slider&#39;</span><span class="p">,</span>
+        <span class="nb">min</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="nb">max</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+        <span class="n">marks</span><span class="o">=</span><span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">):</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()},</span>
+        <span class="n">step</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;49%&#39;</span><span class="p">,</span> <span class="s1">&#39;padding&#39;</span><span class="p">:</span> <span class="s1">&#39;0px 20px 20px 20px&#39;</span><span class="p">})</span>
+<span class="p">])</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="s1">&#39;crossfilter-indicator-scatter&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">),</span>
+    <span class="p">[</span><span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-xaxis-column&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-yaxis-column&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-xaxis-type&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-yaxis-type&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-year--slider&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)])</span>
+<span class="k">def</span> <span class="nf">update_graph</span><span class="p">(</span><span class="n">xaxis_column_name</span><span class="p">,</span> <span class="n">yaxis_column_name</span><span class="p">,</span>
+                 <span class="n">xaxis_type</span><span class="p">,</span> <span class="n">yaxis_type</span><span class="p">,</span>
+                 <span class="n">year_value</span><span class="p">):</span>
+    <span class="n">dff</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year_value</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">dff</span><span class="p">[</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">xaxis_column_name</span><span class="p">][</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">dff</span><span class="p">[</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">yaxis_column_name</span><span class="p">][</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+            <span class="n">text</span><span class="o">=</span><span class="n">dff</span><span class="p">[</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">yaxis_column_name</span><span class="p">][</span><span class="s1">&#39;Country Name&#39;</span><span class="p">],</span>
+            <span class="n">customdata</span><span class="o">=</span><span class="n">dff</span><span class="p">[</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">yaxis_column_name</span><span class="p">][</span><span class="s1">&#39;Country Name&#39;</span><span class="p">],</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="p">{</span>
+                <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+                <span class="s1">&#39;opacity&#39;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+                <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span><span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)],</span>
+        <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">xaxis</span><span class="o">=</span><span class="p">{</span>
+                <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">xaxis_column_name</span><span class="p">,</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;linear&#39;</span> <span class="k">if</span> <span class="n">xaxis_type</span> <span class="o">==</span> <span class="s1">&#39;Linear&#39;</span> <span class="k">else</span> <span class="s1">&#39;log&#39;</span>
+            <span class="p">},</span>
+            <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span>
+                <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">yaxis_column_name</span><span class="p">,</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;linear&#39;</span> <span class="k">if</span> <span class="n">yaxis_type</span> <span class="o">==</span> <span class="s1">&#39;Linear&#39;</span> <span class="k">else</span> <span class="s1">&#39;log&#39;</span>
+            <span class="p">},</span>
+            <span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;l&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+            <span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span>
+            <span class="n">hovermode</span><span class="o">=</span><span class="s1">&#39;closest&#39;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">create_time_series</span><span class="p">(</span><span class="n">dff</span><span class="p">,</span> <span class="n">axis_type</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines+markers&#39;</span>
+        <span class="p">)],</span>
+        <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="mi">225</span><span class="p">,</span>
+            <span class="s1">&#39;margin&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;l&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+            <span class="s1">&#39;annotations&#39;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mf">0.85</span><span class="p">,</span> <span class="s1">&#39;xanchor&#39;</span><span class="p">:</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;yanchor&#39;</span><span class="p">:</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;xref&#39;</span><span class="p">:</span> <span class="s1">&#39;paper&#39;</span><span class="p">,</span> <span class="s1">&#39;yref&#39;</span><span class="p">:</span> <span class="s1">&#39;paper&#39;</span><span class="p">,</span> <span class="s1">&#39;showarrow&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s1">&#39;align&#39;</span><span class="p">:</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;bgcolor&#39;</span><span class="p">:</span> <span class="s1">&#39;rgba(255, 255, 255, 0.5)&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">title</span>
+            <span class="p">}],</span>
+            <span class="s1">&#39;yaxis&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;linear&#39;</span> <span class="k">if</span> <span class="n">axis_type</span> <span class="o">==</span> <span class="s1">&#39;Linear&#39;</span> <span class="k">else</span> <span class="s1">&#39;log&#39;</span><span class="p">},</span>
+            <span class="s1">&#39;xaxis&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;showgrid&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="s1">&#39;x-time-series&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">),</span>
+    <span class="p">[</span><span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-indicator-scatter&#39;</span><span class="p">,</span> <span class="s1">&#39;hoverData&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-xaxis-column&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-xaxis-type&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)])</span>
+<span class="k">def</span> <span class="nf">update_y_timeseries</span><span class="p">(</span><span class="n">hoverData</span><span class="p">,</span> <span class="n">xaxis_column_name</span><span class="p">,</span> <span class="n">axis_type</span><span class="p">):</span>
+    <span class="n">country_name</span> <span class="o">=</span> <span class="n">hoverData</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;customdata&#39;</span><span class="p">]</span>
+    <span class="n">dff</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country_name</span><span class="p">]</span>
+    <span class="n">dff</span> <span class="o">=</span> <span class="n">dff</span><span class="p">[</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">xaxis_column_name</span><span class="p">]</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&lt;b&gt;</span><span class="si">{}</span><span class="s1">&lt;/b&gt;&lt;br&gt;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">country_name</span><span class="p">,</span> <span class="n">xaxis_column_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">create_time_series</span><span class="p">(</span><span class="n">dff</span><span class="p">,</span> <span class="n">axis_type</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="s1">&#39;y-time-series&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">),</span>
+    <span class="p">[</span><span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-indicator-scatter&#39;</span><span class="p">,</span> <span class="s1">&#39;hoverData&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-yaxis-column&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+     <span class="n">dash</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;crossfilter-yaxis-type&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)])</span>
+<span class="k">def</span> <span class="nf">update_x_timeseries</span><span class="p">(</span><span class="n">hoverData</span><span class="p">,</span> <span class="n">yaxis_column_name</span><span class="p">,</span> <span class="n">axis_type</span><span class="p">):</span>
+    <span class="n">dff</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">hoverData</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;customdata&#39;</span><span class="p">]]</span>
+    <span class="n">dff</span> <span class="o">=</span> <span class="n">dff</span><span class="p">[</span><span class="n">dff</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">yaxis_column_name</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">create_time_series</span><span class="p">(</span><span class="n">dff</span><span class="p">,</span> <span class="n">axis_type</span><span class="p">,</span> <span class="n">yaxis_column_name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Serve the app using <code>run_server</code>.  Unlike the standard <code>Dash.run_server</code> method, the <code>JupyterDash.run_server</code> method doesn't block execution of the notebook. It serves the app in a background thread, making it possible to run other notebook calculations while the app is running.</p>
+<p>This makes it possible to iterativly update the app without rerunning the potentially expensive data processing steps.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By default, <code>run_server</code> displays a URL that you can click on to open the app in a browser tab. The <code>mode</code> argument to <code>run_server</code> can be used to change this behavior.  Setting <code>mode="inline"</code> will display the app directly in the notebook output cell.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When running in JupyterLab, with the <code>jupyterlab-dash</code> extension, setting <code>mode="jupyterlab"</code> will open the app in a tab in JupyterLab.</p>
+<div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;jupyterlab&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/gbnotes/2020/06/20/getting_started.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/gbnotes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/gbnotes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/gbnotes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/bombagian" title="bombagian"><svg class="svg-icon grey"><use xlink:href="/gbnotes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/gbomba83" title="gbomba83"><svg class="svg-icon grey"><use xlink:href="/gbnotes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
